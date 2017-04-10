@@ -106,14 +106,14 @@ class CQZContactsSelectorViewController: UIViewController {
     
     fileprivate func animateCollectionView(expand:Bool, animate:Bool) {
         //change contactsSelectedView
-        let duration:TimeInterval = (animate ? 0.3 : 0)
-        let height:CGFloat = expand ? 90 : 0
-        if self.heightContactsSelectedView.constant != height {
-            self.heightContactsSelectedView.constant = height
-            UIView.animate(withDuration:duration ) { [weak self] in
-                self?.view.layoutIfNeeded()
-            }
-        }
+//        let duration:TimeInterval = (animate ? 0.3 : 0)
+//        let height:CGFloat = expand ? 90 : 0
+//        if self.heightContactsSelectedView.constant != height {
+//            self.heightContactsSelectedView.constant = height
+//            UIView.animate(withDuration:duration ) { [weak self] in
+//                self?.view.layoutIfNeeded()
+//            }
+//        }
     }
     
 }
