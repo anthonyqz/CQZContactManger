@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   	s.homepage 			= 'https://github.com/anthonyqz/CQZContactManger.git'
   	s.author 			= { "Christian Quicano" => "anthony.qz@ecorenetworks.com" }
   	s.source 			= {:git => 'https://github.com/anthonyqz/CQZContactManger.git', :tag => s.version}
-  	s.ios.deployment_target 	= ‘9.0’
+  	s.ios.deployment_target 	= '9.0'
   	s.requires_arc 			= true
 	s.frameworks             	= "Foundation"
 	s.frameworks             	= "Contacts"
