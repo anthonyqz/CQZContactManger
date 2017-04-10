@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CQZContactsSelectorViewController" customModule="CQZContactManger">
+            <connections>
+                <outlet property="collectionView" destination="1L0-li-xAO" id="iUj-fK-1ws"/>
+                <outlet property="contactsSelectedView" destination="yQI-oG-Fu1" id="1qu-vI-bgJ"/>
+                <outlet property="heightContactsSelectedView" destination="DoN-w9-Mrj" id="cIQ-72-WZy"/>
+                <outlet property="searchBar" destination="nJc-er-JHn" id="UHO-kC-dil"/>
+                <outlet property="tableView" destination="2mN-IA-hPv" id="djC-4H-FIz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nJc-er-JHn">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="PPe-tm-2vn"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="JVb-bN-jcn"/>
+                    </connections>
+                </searchBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQI-oG-Fu1">
+                    <rect key="frame" x="0.0" y="44" width="375" height="90"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1L0-li-xAO">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="vk2-iC-Pj5">
+                                <size key="itemSize" width="74" height="90"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="y8y-Ee-HMK"/>
+                                <outlet property="delegate" destination="-1" id="CTh-vb-Z9g"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="DoN-w9-Mrj"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2mN-IA-hPv">
+                    <rect key="frame" x="0.0" y="132" width="375" height="471"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="d0j-59-gwi"/>
+                        <outlet property="delegate" destination="-1" id="KXp-AP-C8a"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="2mN-IA-hPv" secondAttribute="trailing" id="0rv-S9-XyE"/>
+                <constraint firstItem="2mN-IA-hPv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Adx-BI-xne"/>
+                <constraint firstItem="2mN-IA-hPv" firstAttribute="top" secondItem="yQI-oG-Fu1" secondAttribute="bottom" constant="-2" id="IYz-Vo-5TF"/>
+                <constraint firstItem="yQI-oG-Fu1" firstAttribute="top" secondItem="nJc-er-JHn" secondAttribute="bottom" id="MZt-Hc-Qcd"/>
+                <constraint firstAttribute="trailing" secondItem="nJc-er-JHn" secondAttribute="trailing" id="R1U-mX-vWH"/>
+                <constraint firstItem="nJc-er-JHn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ft9-6F-bme"/>
+                <constraint firstItem="nJc-er-JHn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ndc-Jy-Mre"/>
+                <constraint firstItem="yQI-oG-Fu1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qeY-5V-WvP"/>
+                <constraint firstAttribute="trailing" secondItem="yQI-oG-Fu1" secondAttribute="trailing" id="tWh-Oj-jER"/>
+                <constraint firstAttribute="bottom" secondItem="2mN-IA-hPv" secondAttribute="bottom" id="wZ1-Jw-lTz"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+        <navigationBar contentMode="scaleToFill" id="5QT-4y-zgD">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <items>
+                <navigationItem title="Title" id="Bym-5U-WIz"/>
+            </items>
+            <point key="canvasLocation" x="460" y="-258"/>
+        </navigationBar>
+    </objects>
+</document>
