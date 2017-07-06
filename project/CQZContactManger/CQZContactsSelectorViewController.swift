@@ -57,7 +57,6 @@ class CQZContactsSelectorViewController: UIViewController {
 
     //MARK:- IBAction
     
-    
     //MARK:- fileprivate
     fileprivate func sortedAlphabetically(contacts:[CNContact]) -> [ContactGroup] {
         var contacts = contacts
