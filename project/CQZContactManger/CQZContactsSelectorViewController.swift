@@ -97,22 +97,22 @@ class CQZContactsSelectorViewController: UIViewController {
     
     private func register(nibs:[String], inTableView tableView:UITableView?, inCollectionView collectionView:UICollectionView?) {
         for nibName in nibs {
-            let nib = UINib(nibName: nibName, bundle: nil);
+            let nib = UINib(nibName: nibName, bundle: Bundle(for: CQZContactsSelectorViewController.self));
             tableView?.register(nib, forCellReuseIdentifier: nibName)
             collectionView?.register(nib, forCellWithReuseIdentifier: nibName)
         }
     }
     
     fileprivate func animateCollectionView(expand:Bool, animate:Bool) {
-//        //change contactsSelectedView
-//        let duration:TimeInterval = (animate ? 0.3 : 0)
-//        let height:CGFloat = expand ? 90 : 0
-//        if self.heightContactsSelectedView.constant != height {
-//            self.heightContactsSelectedView.constant = height
-//            UIView.animate(withDuration:duration ) { [weak self] in
-//                self?.view.layoutIfNeeded()
-//            }
-//        }
+        //change contactsSelectedView
+        let duration:TimeInterval = (animate ? 0.3 : 0)
+        let height:CGFloat = expand ? 90 : 0
+        if self.heightContactsSelectedView.constant != height {
+            self.heightContactsSelectedView.constant = height
+            UIView.animate(withDuration:duration ) { [weak self] in
+                self?.view.layoutIfNeeded()
+            }
+        }
     }
     
 }

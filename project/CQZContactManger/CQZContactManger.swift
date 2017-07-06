@@ -47,7 +47,6 @@ open class CQZContactManger: NSObject {
     }
     
     open func showContactsSelectionCustom(inViewController viewController:UIViewController?, completeSelection:@escaping (_ contacts:[CNContact]) -> ()) {
-//        let contactsViewController = CQZContactsSelectorViewController()
         let contactsViewController = CQZContactsSelectorViewController(nibName: kCQZContactsSelectorViewController, bundle: Bundle(for: CQZContactsSelectorViewController.self))
         contactsViewController.completeSelection = completeSelection
         let nav = UINavigationController(rootViewController: contactsViewController)
