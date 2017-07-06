@@ -41,5 +41,4 @@ class CQZContactUtil {
         return label
     }
     
-    
 }

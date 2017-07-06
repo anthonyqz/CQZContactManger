@@ -26,19 +26,21 @@ class ViewController: UIViewController {
 
     @IBAction func selectContact(_ sender: Any) {
         
-        CQZContactManger.shared.showContactsSelectionCustom(inViewController: self) { (contacts) in
-            
-            //send to service test
-            let url = "https://miscitas.herokuapp.com/api/doctores/store/pacientes"
-            let params = self.createParams(from: contacts)
-            
-            self.requestPost(toUrl: url
-                , parameters: params
-                , completed: { (success, response) in
-                    print(response)
-            })
-            
-            print(contacts.count)
+        CQZContactManger.shared.showContactsSelectionCustom(inViewController: self
+            , barTintColor: UIColor.green
+            , itemTintColor: UIColor.black
+            , titleNavigationItem: "Contactos") { (contacts) in
+                //send to service test
+                let url = "https://miscitas.herokuapp.com/api/doctores/store/pacientes"
+                let params = self.createParams(from: contacts)
+                
+                self.requestPost(toUrl: url
+                    , parameters: params
+                    , completed: { (success, response) in
+                        print(response)
+                })
+                
+                print(contacts.count)
         }
         
     }

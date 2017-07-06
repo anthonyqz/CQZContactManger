@@ -46,12 +46,31 @@ open class CQZContactManger: NSObject {
         viewController?.present(contactPicker, animated: true, completion: nil)
     }
     
-    open func showContactsSelectionCustom(inViewController viewController:UIViewController?, completeSelection:@escaping (_ contacts:[CNContact]) -> ()) {
+    open func showContactsSelectionCustom(inViewController viewController:UIViewController?
+        , barTintColor: UIColor?
+        , itemTintColor: UIColor?
+        , titleNavigationItem: String?
+        , completeSelection:@escaping (_ contacts:[CNContact]) -> ()) {
+        
         let contactsViewController = CQZContactsSelectorViewController(nibName: kCQZContactsSelectorViewController, bundle: Bundle(for: CQZContactsSelectorViewController.self))
         contactsViewController.completeSelection = completeSelection
         let nav = UINavigationController(rootViewController: contactsViewController)
         nav.navigationBar.isTranslucent = false
+        
+        if let barTintColor = barTintColor {
+            nav.navigationBar.barTintColor = barTintColor
+        }
+        
+        if let itemTintColor = itemTintColor {
+            nav.navigationBar.tintColor = itemTintColor
+        }
+        
+        if let titleNavigationItem = titleNavigationItem {
+            nav.topViewController?.title = titleNavigationItem
+        }
+        
         viewController?.present(nav, animated: true, completion: nil)
+        
     }
     
     open func getAllContacts() -> [CNContact] {
