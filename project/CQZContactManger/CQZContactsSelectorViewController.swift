@@ -248,6 +248,10 @@ extension CQZContactsSelectorViewController:UISearchBarDelegate {
         }
     }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
     private func filterBy(_ searchText:String) {
         isSearchActivated = searchText.characters.count == 0 ? false : true
         contactsFiltered = isSearchActivated ? filter(contacts: contacts, bySearchText: searchText) : []
