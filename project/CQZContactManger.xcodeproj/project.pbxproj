@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A35288C1B26632749D3F13BB /* Pods_CQZContactManagerTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84579A22E908B18AD54B247D /* Pods_CQZContactManagerTestApp.framework */; };
-		EF12569B1E80B26F008F7ADC /* CQZContactClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF12569A1E80B26F008F7ADC /* CQZContactClasses.swift */; };
 		EF3B45881E7DF0AF0087413B /* CQZContactManger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3B457E1E7DF0AE0087413B /* CQZContactManger.framework */; };
 		EF3B458D1E7DF0AF0087413B /* CQZContactMangerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3B458C1E7DF0AF0087413B /* CQZContactMangerTests.swift */; };
 		EF3B458F1E7DF0AF0087413B /* CQZContactManger.h in Headers */ = {isa = PBXBuildFile; fileRef = EF3B45811E7DF0AE0087413B /* CQZContactManger.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -71,7 +70,6 @@
 /* Begin PBXFileReference section */
 		84579A22E908B18AD54B247D /* Pods_CQZContactManagerTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CQZContactManagerTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91BC6913529DD90E46D8C068 /* Pods-CQZContactManagerTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CQZContactManagerTestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CQZContactManagerTestApp/Pods-CQZContactManagerTestApp.release.xcconfig"; sourceTree = "<group>"; };
-		EF12569A1E80B26F008F7ADC /* CQZContactClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CQZContactClasses.swift; sourceTree = "<group>"; };
 		EF3B457E1E7DF0AE0087413B /* CQZContactManger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CQZContactManger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3B45811E7DF0AE0087413B /* CQZContactManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQZContactManger.h; sourceTree = "<group>"; };
 		EF3B45821E7DF0AE0087413B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 				EF3B45811E7DF0AE0087413B /* CQZContactManger.h */,
 				EF3B45AF1E7DF1530087413B /* CQZContactManger.swift */,
 				EFD993CA1E80A102007B1B1F /* CQZContactStructs.swift */,
-				EF12569A1E80B26F008F7ADC /* CQZContactClasses.swift */,
 				EFD993CE1E80AA36007B1B1F /* CQZContactUtils.swift */,
 				EF3B45BD1E7EDD380087413B /* Contacts Selector */,
 				EF3B45821E7DF0AE0087413B /* Info.plist */,
@@ -436,7 +433,6 @@
 			files = (
 				EFD993CB1E80A102007B1B1F /* CQZContactStructs.swift in Sources */,
 				EFD993CF1E80AA36007B1B1F /* CQZContactUtils.swift in Sources */,
-				EF12569B1E80B26F008F7ADC /* CQZContactClasses.swift in Sources */,
 				EF3B45B01E7DF1530087413B /* CQZContactManger.swift in Sources */,
 				EF3B45BA1E7ED8EC0087413B /* CQZContactsSelectorViewController.swift in Sources */,
 				EF3B45C61E7F4B670087413B /* CQZContactSelectedCell.swift in Sources */,

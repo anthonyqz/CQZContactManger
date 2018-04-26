@@ -10,10 +10,10 @@ import UIKit
 import Contacts
 import ContactsUI
 
-open class CQZContactManger: NSObject {
+public class CQZContactManger: NSObject {
     
     //MARK:- public properties
-    open static let shared = CQZContactManger()
+    public static let shared = CQZContactManger()
     
     //MARK:- fileprivate properties
     fileprivate let contactsStore = CNContactStore()
@@ -29,7 +29,7 @@ open class CQZContactManger: NSObject {
     }
     
     //MARK:- public methods
-    open func requestForAccess(completionHandler:@escaping (_ access:Bool)->()) {
+    public func requestForAccess(completionHandler:@escaping (_ access:Bool)->()) {
         //validate authorization
         let authorizationStatus = CNContactStore.authorizationStatus(for: .contacts)
         if authorizationStatus != .authorized {
@@ -41,12 +41,12 @@ open class CQZContactManger: NSObject {
         }
     }
     
-    open func showContactsSelectionDefault(inViewController viewController:UIViewController?, completeSelection:@escaping (_ contacts:[CNContact]) -> ()) {
+    public func showContactsSelectionDefault(inViewController viewController:UIViewController?, completeSelection:@escaping (_ contacts:[CNContact]) -> ()) {
         self.completeSelection = completeSelection
         viewController?.present(contactPicker, animated: true, completion: nil)
     }
     
-    open func showContactsSelectionCustom(inViewController viewController:UIViewController?
+    public func showContactsSelectionCustom(inViewController viewController:UIViewController?
         , barTintColor: UIColor?
         , itemTintColor: UIColor?
         , titleNavigationItem: String?
@@ -73,7 +73,7 @@ open class CQZContactManger: NSObject {
         
     }
     
-    open func getAllContacts() -> [CNContact] {
+    public func getAllContacts() -> [CNContact] {
         
         //Keys to fecth
         let keys:[CNKeyDescriptor] = [

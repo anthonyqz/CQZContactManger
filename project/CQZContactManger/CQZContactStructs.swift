@@ -9,7 +9,7 @@
 import Foundation
 import Contacts
 
-struct ContactGroup {
+public struct ContactGroup {
     let indexTitle:String
     let contacts:[CNContact]
 }
