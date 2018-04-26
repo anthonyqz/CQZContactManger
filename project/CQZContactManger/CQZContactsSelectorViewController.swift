@@ -243,7 +243,7 @@ extension CQZContactsSelectorViewController:UISearchBarDelegate {
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar)
     {
-        if searchBar.text?.characters.count == 0 {
+        if searchBar.text?.count == 0 {
             searchBar.showsCancelButton = true
         }
     }
@@ -253,7 +253,7 @@ extension CQZContactsSelectorViewController:UISearchBarDelegate {
     }
     
     private func filterBy(_ searchText:String) {
-        isSearchActivated = searchText.characters.count == 0 ? false : true
+        isSearchActivated = searchText.count == 0 ? false : true
         contactsFiltered = isSearchActivated ? filter(contacts: contacts, bySearchText: searchText) : []
         tableView.reloadData()
     }

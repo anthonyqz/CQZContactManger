@@ -15,14 +15,14 @@ public class CQZContactManger: NSObject {
     //MARK:- public properties
     public static let shared = CQZContactManger()
     
-    //MARK:- fileprivate properties
-    fileprivate let contactsStore = CNContactStore()
-    fileprivate let contactPicker = CNContactPickerViewController()
+    //MARK:- private properties
+    private let contactsStore = CNContactStore()
+    private let contactPicker = CNContactPickerViewController()
     
     fileprivate var completeSelection:((_ contacts:[CNContact]) -> ())?
     
     //MARK:- override methods
-    @objc fileprivate override init(){
+    @objc private override init(){
         super.init()
         
         contactPicker.delegate = self
