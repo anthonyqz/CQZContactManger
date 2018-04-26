@@ -64,7 +64,7 @@ class CQZContactsSelectorViewController: UIViewController {
         for indice in CQZArrayAlphabet {
             let group = contacts.filter(){ $0.givenName.hasPrefix("\(indice.lowercased())") || $0.familyName.hasPrefix("\(indice.lowercased())") || $0.givenName.hasPrefix("\(indice.uppercased())") || $0.familyName.hasPrefix("\(indice.uppercased())") }
             contacts = contacts.filter(){ !group.contains($0) }
-            result.append(ContactGroup(indexTitle: indice.uppercased(), contacts: group))
+            result.append(ContactGroup(withIndexTitle: indice.uppercased(), contacts: group))
         }
         //clean data
         result = result.filter(){ $0.contacts.count > 0 }

@@ -10,7 +10,14 @@ import Foundation
 import Contacts
 
 public struct ContactGroup {
+    
     public let indexTitle:String
     public let contacts:[CNContact]
+    
+    public init(withIndexTitle indexTitle:String, contacts:[CNContact]) {
+        self.indexTitle = indexTitle
+        self.contacts = contacts
+    }
+    
 }
 
